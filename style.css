@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(244, 245, 238);
+    
+}
+
+#mainDiv {
+    display: flex;
+    gap: 50px;
+}
