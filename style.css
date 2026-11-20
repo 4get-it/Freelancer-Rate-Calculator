@@ -1,9 +1,28 @@
 body {
-    background-color: rgb(244, 245, 238);
-    
+    background-color: #e6fff7;
+    font-family: sans-serif;
+    font-size: 28px;
+    padding: 50px;
 }
 
 #mainDiv {
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 10vw;
+    justify-content: center;
+    align-items: center;
+}
+    
+input {
+    font-size: 30px;
+    text-align: center;
+}
+
+#outputDiv {
+    background-color: rgb(210, 236, 228);
+    padding: 0px 20px;
+    outline-width: 3px;
+    outline-color: rgb(151, 190, 179);
+    outline-style: auto;
+    border-radius: 12px;
 }
