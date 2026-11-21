@@ -6,22 +6,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--
-input needed: 
--profit wanted per month
--worktime per week (in hours)
--worktime per project
--tax% and expenses per month
-
-calculations:
--income/month = (profit/month + expenses/month) : (1 - (tax% : 100))
--income/hour = income/month : (worktime/week * 4.35)                    // 4.35 -> weeks in a month in average
--project price = income/hour * worktime/project
-
-output:
--income per hour needed
--project price
-    -->
 <h1>Freelance Rate Calculator</h1>
 <div id="mainDiv">  
     <div id="inputDiv">
@@ -35,7 +19,7 @@ output:
         </div>
         <div class="inputDivs">
             <p>Your average worktime per 1 client (in hours):</p>
-            <input type="number" id="worktimeProject">
+            <input type="number" id="worktimeClient">
         </div>
         <div class="inputDivs">
             <p>Tax %:</p>
@@ -47,8 +31,8 @@ output:
         </div>
     </div>
     <div id="outputDiv">
-        <p>Income per hour needed: 0</p>
-        <p>Price per client needed: 0</p>
+        <p>Income per hour needed: <span id="incomeHourOutput">0</span></p>
+        <p>Price per client needed: <span id="priceClientOutput">0</span></p>
     </div>
 </div>
 
