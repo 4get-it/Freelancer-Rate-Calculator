@@ -25,4 +25,5 @@ input {
     outline-color: rgb(151, 190, 179);
     outline-style: auto;
     border-radius: 12px;
+    width: 440px;
 }

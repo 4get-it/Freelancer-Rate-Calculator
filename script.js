@@ -8,8 +8,8 @@ const incomeHourOutput = document.getElementById("incomeHourOutput")
 const priceClientOutput = document.getElementById("priceClientOutput")
 
 function update() {
-    if(Number(taxRate.value) > 100) {
-        taxRate.value = 100
+    if(Number(taxRate.value) >= 100) {
+        taxRate.value = 99
     }
 
     const incomeMonth = (Number(profitMonth.value) + Number(expensesMonth.value)) / (1 - (Number(taxRate.value) / 100))
@@ -19,6 +19,10 @@ function update() {
     if(Number(profitMonth.value) > 0 && Number(worktimeWeek.value) > 0 && Number(worktimeClient.value) > 0) {
         incomeHourOutput.textContent = incomeHour.toFixed(2)
         priceClientOutput.textContent = clientPrice.toFixed(2)
+        if (incomeHourOutput.textContent > 2000000000000000000) {
+            incomeHourOutput.textContent = "Sorry, sounds too ilegal"
+            priceClientOutput.textContent = "A lot."
+        }
     } else {
         incomeHourOutput.textContent = 0
         priceClientOutput.textContent = 0
